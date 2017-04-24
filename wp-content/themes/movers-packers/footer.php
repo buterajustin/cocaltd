@@ -81,8 +81,8 @@
   <!--end .container-->
   <div class="copyright-wrapper">
     <div class="container">
-      <div class="copyright-txt"><?php esc_attr_e('&copy; 2016','movers-packers');?> <?php bloginfo('name'); ?>. <?php esc_attr_e('All Rights Reserved', 'movers-packers');?></div>
-                <div class="design-by"><?php printf('<a href="'.esc_url(SKT_FREE_THEME_URL).'" rel="nofollow" target="_blank">SKT Movers Packers Theme</a>' ); ?></div>
+      <div class="copyright-txt"><?php esc_attr_e('&copy; 2017','movers-packers');?> <?php bloginfo('name'); ?>. <?php esc_attr_e('All Rights Reserved', 'movers-packers');?></div>
+                <div class="design-by"><?php printf('<a href="http://www.fiatopesolutions.com" rel="nofollow" target="_blank">Proudly Powered by Fiatope Digital Solutions</a>' ); ?></div>
     </div>
     <div class="clear"></div>
   </div>

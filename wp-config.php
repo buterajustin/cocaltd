@@ -26,7 +26,7 @@ define('DB_NAME', 'coca');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'Ban_seign-rw,20');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
