@@ -4,12 +4,12 @@
 *      Version: 1.0
 *      By Robosoft
 *
-*      Contact: http://robosoft.co
+*      Contact: https://robosoft.co/robogallery/ 
 *      Created: 2015
 *      Licensed under the GPLv2 license - http://opensource.org/licenses/gpl-2.0.php
 *
 *      Copyright (c) 2014-2016, Robosoft. All rights reserved.
-*      Available only in  http://robosoft.co/robogallery
+*      Available only in  https://robosoft.co/robogallery/ 
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -49,7 +49,7 @@ add_action('admin_head', 'robo_gallery_hide_fieldattachment');
 		$form_fields[ROBO_GALLERY_PREFIX.'gallery_line'] = array(
 			'label' => '',
 			'input' => 'html',
-			'html' 	=> ( !ROBO_GALLERY_PRO ?'<br/><br/><span>Robo Gallery <br> Available in PRO </span>':'<h4>'.__('Robo Gallery', 'rbs_gallery').'</h4>')
+			'html' 	=> ( !ROBO_GALLERY_PRO ?'<br/><br/><span>Robo Gallery <br> Available in PRO </span>':'<h4>'.__('Robo Gallery', 'robo-gallery').'</h4>')
 		);
 		
 		$form_fields[ROBO_GALLERY_PREFIX.'gallery_tags'] = array(

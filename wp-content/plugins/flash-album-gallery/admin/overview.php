@@ -263,8 +263,14 @@ function get_serverinfo() {
 	if (is_array($mysqlinfo)) $sql_mode = $mysqlinfo[0]->Value;
 	if (empty($sql_mode)) $sql_mode = __('Not set', 'flash-album-gallery');
 	// Get PHP Safe Mode
-	if(ini_get('safe_mode')) $safe_mode = __('On', 'flash-album-gallery');
-	else $safe_mode = __('Off', 'flash-album-gallery');
+    $safe_mode = false;
+    if(version_compare('5.3', phpversion(), '>')){
+        if(ini_get('safe_mode')){
+            $safe_mode = __('On', 'flash-album-gallery');
+        } else{
+            $safe_mode = __('Off', 'flash-album-gallery');
+        }
+    }
 	// Get PHP allow_url_fopen
 	if(ini_get('allow_url_fopen')) $allow_url_fopen = __('On', 'flash-album-gallery');
 	else $allow_url_fopen = __('Off', 'flash-album-gallery');
@@ -302,7 +308,9 @@ function get_serverinfo() {
 	<li><?php _e('MYSQL Version', 'flash-album-gallery'); ?> : <span><?php echo $sqlversion; ?></span></li>
 	<li><?php _e('SQL Mode', 'flash-album-gallery'); ?> : <span><?php echo $sql_mode; ?></span></li>
 	<li><?php _e('PHP Version', 'flash-album-gallery'); ?> : <span><?php echo PHP_VERSION; ?></span></li>
-	<li><?php _e('PHP Safe Mode', 'flash-album-gallery'); ?> : <span><?php echo $safe_mode; ?></span></li>
+    <?php if($safe_mode){ ?>
+	    <li><?php _e('PHP Safe Mode', 'flash-album-gallery'); ?> : <span><?php echo $safe_mode; ?></span></li>
+    <?php } ?>
 	<li><?php _e('PHP Allow URL fopen', 'flash-album-gallery'); ?> : <span><?php echo $allow_url_fopen; ?></span></li>
 	<li><?php _e('PHP Memory Limit', 'flash-album-gallery'); ?> : <span><?php echo $memory_limit; ?></span></li>
 	<li><?php _e('PHP Max Upload Size', 'flash-album-gallery'); ?> : <span><?php echo $upload_max; ?></span></li>

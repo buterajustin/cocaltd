@@ -295,7 +295,7 @@ class CMB2_Types {
 			</div>
 		</div>
 		<p class="cmb-add-row">
-			<button data-selector="<?php echo $table_id; ?>" class="cmb-add-row-button button"><?php echo esc_html( $this->_text( 'add_row_text', __( 'Add Row', 'cmb2' ) ) ); ?></button>
+			<button data-selector="<?php echo $table_id; ?>" class="cmb-add-row-button button"><?php echo esc_html( $this->_text( 'add_row_text', 'Add Row' ) ); ?></button>
 		</p>
 
 		<?php
@@ -354,7 +354,7 @@ class CMB2_Types {
 				<?php $this->_render(); ?>
 			</div>
 			<div class="cmb-td cmb-remove-row">
-				<button class="button cmb-remove-row-button<?php echo $disabled; ?>"><?php echo esc_html( $this->_text( 'remove_row_text', __( 'Remove', 'cmb2' ) ) ); ?></button>
+				<button class="button cmb-remove-row-button<?php echo $disabled; ?>"><?php echo esc_html( $this->_text( 'remove_row_text', 'Remove' ) ); ?></button>
 			</div>
 		</div>
 
@@ -723,7 +723,7 @@ class CMB2_Types {
 		$options    = ''; $i = 1;
 
 		if ( ! $terms ) {
-			$options .= sprintf( '<li><label>%s</label></li>', esc_html( $this->_text( 'no_terms_text', __( 'No terms', 'cmb2' ) ) ) );
+			$options .= sprintf( '<li><label>%s</label></li>', esc_html( $this->_text( 'no_terms_text', 'No terms' ) ) );
 		} else {
 			$option_none  = $this->field->args( 'show_option_none' );
 			if ( ! empty( $option_none ) ) {
@@ -771,7 +771,7 @@ class CMB2_Types {
 		$options     = ''; $i = 1;
 
 		if ( ! $terms ) {
-			$options .= sprintf( '<li><label>%s</label></li>', esc_html( $this->_text( 'no_terms_text', __( 'No terms', 'cmb2' ) ) ) );
+			$options .= sprintf( '<li><label>%s</label></li>', esc_html( $this->_text( 'no_terms_text', 'No terms' ) ) );
 		} else {
 
 			foreach ( $terms as $term ) {
@@ -836,7 +836,7 @@ class CMB2_Types {
 		$this->input( array(
 			'type'  => 'button',
 			'class' => 'cmb2-upload-button button cmb2-upload-list',
-			'value'  => esc_html( $this->_text( 'add_upload_files_text', __( 'Add or Upload Files', 'cmb2' ) ) ),
+			'value'  => esc_html( $this->_text( 'add_upload_files_text', 'Add or Upload Files' ) ),
 			'name'  => '', 'id'  => '',
 		) );
 
@@ -894,7 +894,7 @@ class CMB2_Types {
 			'data-previewsize' => is_array( $img_size ) ? '[' . implode( ',', $img_size ) . ']' : 350,
 		) );
 
-		printf( '<input class="cmb2-upload-button button" type="button" value="%s" />', esc_attr( $this->_text( 'add_upload_file_text', __( 'Add or Upload File', 'cmb2' ) ) ) );
+		printf( '<input class="cmb2-upload-button button" type="button" value="%s" />', esc_attr( $this->_text( 'add_upload_file_text', 'Add or Upload File' ) ) );
 
 		$this->_desc( true, true );
 
@@ -968,7 +968,7 @@ class CMB2_Types {
 			$args['tag'],
 			$args['image'],
 			isset( $args['cached_id'] ) ? ' rel="' . $args['cached_id'] . '"' : '',
-			esc_html( $this->_text( 'remove_image_text', __( 'Remove Image', 'cmb2' ) ) ),
+			esc_html( $this->_text( 'remove_image_text', 'Remove Image' ) ),
 			isset( $args['id_input'] ) ? $args['id_input'] : ''
 		);
 	}
@@ -982,12 +982,12 @@ class CMB2_Types {
 	public function file_status_output( $args ) {
 		printf( '<%1$s class="file-status"><span>%2$s <strong>%3$s</strong></span>&nbsp;&nbsp; (<a href="%4$s" target="_blank" rel="external">%5$s</a> / <a href="#" class="cmb2-remove-file-button"%6$s>%7$s</a>)%8$s</%1$s>',
 			$args['tag'],
-			esc_html( $this->_text( 'file_text', __( 'File:', 'cmb2' ) ) ),
+			esc_html( $this->_text( 'file_text',  'File:' ) ),
 			$this->get_file_name_from_path( $args['value'] ),
 			$args['value'],
-			esc_html( $this->_text( 'file-download-text', __( 'Download', 'cmb2' ) ) ),
+			esc_html( $this->_text( 'file-download-text', 'Download' ) ),
 			isset( $args['cached_id'] ) ? ' rel="' . $args['cached_id'] . '"' : '',
-			esc_html( $this->_text( 'remove_text', __( 'Remove', 'cmb2' ) ) ),
+			esc_html( $this->_text( 'remove_text', 'Remove' ) ),
 			isset( $args['id_input'] ) ? $args['id_input'] : ''
 		);
 	}

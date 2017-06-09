@@ -111,6 +111,6 @@ https://github.com/imakewebthings/rbjquer-waypoints/blob/master/licenses.txt
 *      RoboGallery Version: 1.0
 *      Licensed under the GPLv2 license - http://opensource.org/licenses/gpl-2.0.php
 *      Copyright (c) 2014-2016, Robosoft. All rights reserved.
-*      Available only in  http://robosoft.co/robogallery
+*      Available only in  https://robosoft.co/robogallery/ 
 */
 !function(o){o(".robo_gallery").on("click",".rbs-lightbox.mfp-link",function(e){e.preventDefault(),window.location.href=o(this).data("mfp-src")}),o(".robo_gallery:not(.robo_gallery_run)").each(function(){o(this).addClass("robo_gallery_run");var e=window[o(this).data("options")],i=o.extend({},e),r=o(this).collagePlus(i);1==i.touch&&(o("body").swipe({swipeLeft:function(e,i,r,l,t){o(".mfp-arrow-left").magnificPopup("prev")},swipeRight:function(){o(".mfp-arrow-right").magnificPopup("next")},threshold:50}),o("body").swipe("disable")),void 0!=roboGalleryDelay&&roboGalleryDelay>0&&setTimeout(function(){r.eveMB("resize")},roboGalleryDelay)})}(rbjQuer);

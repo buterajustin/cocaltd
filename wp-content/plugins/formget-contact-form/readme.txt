@@ -2,8 +2,8 @@
 Contributors: PankajAgarwal
 Tags: contact form, form, forms, contact form plugin, feedback form, Responsive Contact Form, contact us, contact form payments, contact for paypal, form builder, easy contact form
 Requires at least: 3.5.0
-Tested up to: 4.4
-Stable tag: 5.4.0
+Tested up to: 4.7.2
+Stable tag: 5.4.1
 
 FormGet Contact Form manage all your contact forms using single dashboard. Just a click on fields and your contact form is ready for use.
 
@@ -134,6 +134,9 @@ When you create account in FormGet you automatically get support desk. All the e
 
 
 == Changelog ==
+= Version 5.4.1 =
+* Added a admin notice for providing discount.
+
 = Version 5.4.0 =
 * Added sanitization and escaping of data.
 

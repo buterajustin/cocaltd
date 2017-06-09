@@ -6,63 +6,63 @@
 
 		// Default options
 		var ui,
-			defaults = {
-				useCSS : true,
-				useSVG : true,
-				initialIndexOnArray : 0,
-				removeBarsOnMobile : true,
-				hideCloseButtonOnMobile : false,
-				hideBarsDelay : 3000,
-				videoMaxWidth : 1140,
-				vimeoColor : 'cccccc',
-				beforeOpen: null,
-				afterOpen: null,
-				afterClose: null,
-				afterMedia: null,
-				nextSlide: null,
-				prevSlide: null,
-				loopAtEnd: false,
-				autoplayVideos: false,
-				queryStringData: {},
-				toggleClassOnLoad: '',
-				hideCaption: 0
-			},
+		defaults = {
+		useCSS : true,
+		useSVG : true,
+		initialIndexOnArray : 0,
+		removeBarsOnMobile : true,
+		hideCloseButtonOnMobile : false,
+		hideBarsDelay : 3000,
+		videoMaxWidth : 1140,
+		vimeoColor : 'cccccc',
+		beforeOpen: null,
+		afterOpen: null,
+		afterClose: null,
+		afterMedia: null,
+		nextSlide: null,
+		prevSlide: null,
+		loopAtEnd: false,
+		autoplayVideos: false,
+		queryStringData: {},
+		toggleClassOnLoad: '',
+		hideCaption: 0
+		},
 
-			plugin = this,
-			elements = [], // slides array [ { href:'...', title:'...' }, ...],
-			$elem,
-			selector = elem.selector,
-			isMobile = navigator.userAgent.match( /(iPad)|(iPhone)|(iPod)|(Android)|(PlayBook)|(BB10)|(BlackBerry)|(Opera Mini)|(IEMobile)|(webOS)|(MeeGo)/i ),
-			isTouch = isMobile !== null || document.createTouch !== undefined || ( 'ontouchstart' in window ) || ( 'onmsgesturechange' in window ) || navigator.msMaxTouchPoints,
-			supportSVG = !! document.createElementNS && !! document.createElementNS( 'http://www.w3.org/2000/svg', 'svg').createSVGRect,
-			winWidth = window.innerWidth ? window.innerWidth : $( window ).width(),
-			winHeight = window.innerHeight ? window.innerHeight : $( window ).height(),
-			currentX = 0,
-			/* jshint multistr: true */
-			html = '<div id="swipebox-overlay">\
-					<div id="swipebox-container">\
-						<div id="swipebox-slider"></div>\
-						<div id="swipebox-top-bar">\
-							<div id="swipebox-title"></div>\
-						</div>\
-						<div id="swipebox-bottom-bar">\
-							<div id="swipebox-arrows">\
-								<a id="swipebox-prev"></a>\
-								<a id="swipebox-next"></a>\
+		plugin = this,
+		elements = [], // slides array [ { href:'...', title:'...' }, ...],
+		$elem,
+		selector = elem.selector,
+		isMobile = navigator.userAgent.match( /(iPad)|(iPhone)|(iPod)|(Android)|(PlayBook)|(BB10)|(BlackBerry)|(Opera Mini)|(IEMobile)|(webOS)|(MeeGo)/i ),
+		isTouch = isMobile !== null || document.createTouch !== undefined || ( 'ontouchstart' in window ) || ( 'onmsgesturechange' in window ) || navigator.msMaxTouchPoints,
+		supportSVG = !! document.createElementNS && !! document.createElementNS( 'http://www.w3.org/2000/svg', 'svg').createSVGRect,
+		winWidth = window.innerWidth ? window.innerWidth : $( window ).width(),
+		winHeight = window.innerHeight ? window.innerHeight : $( window ).height(),
+		currentX = 0,
+		/* jshint multistr: true */
+				html = '<div id="swipebox-overlay">\
+						<div id="swipebox-container">\
+							<div id="swipebox-slider"></div>\
+							<div id="swipebox-top-bar">\
+								<div id="swipebox-title"></div>\
 							</div>\
+							<div id="swipebox-bottom-bar">\
+								<div id="swipebox-arrows">\
+									<a id="swipebox-prev"></a>\
+									<a id="swipebox-next"></a>\
+								</div>\
+							</div>\
+							<a id="swipebox-close"></a>\
 						</div>\
-						<a id="swipebox-close"></a>\
-					</div>\
-			</div>';
+				</div>';
 
 		plugin.settings = {};
 
 		$.swipebox.close = function () {
-			ui.closeSlide();
+		ui.closeSlide();
 		};
 
 		$.swipebox.extend = function () {
-			return ui;
+		return ui;
 		};
 
 		plugin.init = function() {
@@ -71,9 +71,9 @@
 
 			if ( $.isArray( elem ) ) {
 
-				elements = elem;
-				ui.target = $( window );
-				ui.init( plugin.settings.initialIndexOnArray );
+			elements = elem;
+			ui.target = $( window );
+			ui.init( plugin.settings.initialIndexOnArray );
 
 			} else {
 
@@ -81,82 +81,78 @@
 
 					// console.log( isTouch );
 
-					if ( event.target.parentNode.className === 'slide current' ) {
+				if ( event.target.parentNode.className === 'slide current' ) {
 
-						return false;
-					}
+					return false;
+				}
 
-					if ( ! $.isArray( elem ) ) {
-						ui.destroy();
-						$elem = $( selector );
-						ui.actions();
-					}
+				if ( ! $.isArray( elem ) ) {
+					ui.destroy();
+					$elem = $( selector );
+					ui.actions();
+				}
 
-					elements = [];
-					var index, relType, relVal;
+				elements = [];
+				var index, relType, relVal;
 
-					// Allow for HTML5 compliant attribute before legacy use of rel
-					if ( ! relVal ) {
-						relType = 'data-rel';
-						relVal = $( this ).attr( relType );
-					}
+				// Allow for HTML5 compliant attribute before legacy use of rel
+				if ( ! relVal ) {
+					relType = 'data-rel';
+					relVal = $( this ).attr( relType );
+				}
 
-					if ( ! relVal ) {
-						relType = 'rel';
-						relVal = $( this ).attr( relType );
-					}
+				if ( ! relVal ) {
+					relType = 'rel';
+					relVal = $( this ).attr( relType );
+				}
 
-					if ( relVal && relVal !== '' && relVal !== 'nofollow' ) {
-						$elem = $( selector ).filter( '[' + relType + '="' + relVal + '"]' );
-					} else {
-						$elem = $( selector );
-					}
+				if ( relVal && relVal !== '' && relVal !== 'nofollow' ) {
+					$elem = $( selector ).filter( '[' + relType + '="' + relVal + '"]' );
+				} else {
+					$elem = $( selector );
+				}
 
 					$elem.each( function() {
 
-						var title = null,
-							href = null;
-
+					var title = null,
+						href = null;
 						if ( $( this ).attr( 'title' ) ) {
-							title = $( this ).attr( 'title' );
-						}
-
+						title = $( this ).attr( 'title' );
+					}
 						if ( $( 'img', this ).attr( 'alt' ) ) {
-							title = $( 'img', this ).attr( 'alt' );
-						}
-						if( plugin.settings.hideCaption){
-							title= null;
-						}
+						title = $( 'img', this ).attr( 'alt' );
+					}
+					if( plugin.settings.hideCaption){
+						title= null;
+					}
 
-
-						if ( $( this ).attr( 'href' ) ) {
-							href = $( this ).attr( 'href' );
-						}
-
-						elements.push( {
-							href: href,
-							title: title
-						} );
+					if ( $( this ).attr( 'href' ) ) {
+						href = $( this ).attr( 'href' );
+					}
+					elements.push( {
+						href: href,
+						title: title
 					} );
-
-					index = $elem.index( $( this ) );
-					event.preventDefault();
-					event.stopPropagation();
-					ui.target = $( event.target );
-					ui.init( index );
 				} );
-			}
-		};
+
+						index = $elem.index( $( this ) );
+						event.preventDefault();
+						event.stopPropagation();
+						ui.target = $( event.target );
+						ui.init( index );
+					} );
+				}
+			};
 
 		ui = {
 
 			/**
 			 * Initiate Swipebox
 			 */
-			init : function( index ) {
-				if ( plugin.settings.beforeOpen ) {
-					plugin.settings.beforeOpen();
-				}
+		init : function( index ) {
+			if ( plugin.settings.beforeOpen ) {
+				plugin.settings.beforeOpen();
+			}
 				this.target.trigger( 'swipebox-start' );
 				$.swipebox.isOpen = true;
 				this.build();
@@ -395,9 +391,9 @@
 						'transition' : 'transform 0.4s ease'
 					} );
 
-					vDistance = endCoords.pageY - startCoords.pageY;
-					hDistance = endCoords.pageX - startCoords.pageX;
-					hDistancePercent = hDistance*100/winWidth;
+						vDistance = endCoords.pageY - startCoords.pageY;
+						hDistance = endCoords.pageX - startCoords.pageX;
+						hDistancePercent = hDistance*100/winWidth;
 
 					// Swipe to bottom to close
 					if ( vSwipe ) {

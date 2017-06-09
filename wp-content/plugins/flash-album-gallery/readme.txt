@@ -3,7 +3,7 @@ Contributors: pasyuk
 Donate link: http://codeasily.com/donate/
 Tags: admin, fullscreen gallery, gallery, image, images, image gallery, music, photo, photo gallery, slider, slideshow, video, widget, portfolio
 Requires at least: 3.0
-Tested up to: 4.7.3
+Tested up to: 4.7.4
 Stable tag: trunk
 
 Gallery Portfolio, Photo Gallery, Video Gallery, Music Album & Banner Rotator plugin with powerfull admin panel.
@@ -49,6 +49,9 @@ Also available mp3 players and widgets.
 
 
 == Changelog ==
+
+= v4.48 - 13.05.2017 =
+* Fixed warning on PHP 7
 
 = v4.47 - 17.03.2017 =
 * Fixed warning on PHP 7

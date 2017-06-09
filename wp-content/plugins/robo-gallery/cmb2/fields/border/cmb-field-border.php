@@ -1,15 +1,15 @@
 <?php
 /*
 *      Robo Gallery     
-*      Version: 1.0
+*      Version: 2.0
 *      By Robosoft
 *
-*      Contact: http://robosoft.co
-*      Created: 2015
+*      Contact: https://robosoft.co/robogallery/ 
+*      Created: 2017
 *      Licensed under the GPLv2 license - http://opensource.org/licenses/gpl-2.0.php
 *
-*      Copyright (c) 2014-2016, Robosoft. All rights reserved.
-*      Available only in  http://robosoft.co/robogallery
+*      Copyright (c) 2014-2017, Robosoft. All rights reserved.
+*      Available only in  https://robosoft.co/robogallery/ 
 */
 
 function rbs_border_get_state_options( $value = false ) {
@@ -46,7 +46,9 @@ function rbs_border_render_field_callback( $field, $value, $object_id, $object_t
 <div class="form-horizontal">
 
 	<div class="form-group">
-	    <label class="col-sm-2 control-label" for="<?php echo $field_type_object->_id( '_width' ); ?>'"><?php _e( 'Width', 'rbs_gallery' ); ?></label>
+	    <label class="col-sm-2 control-label" for="<?php echo $field_type_object->_id( '_width' ); ?>'">
+	    	<?php _e( 'Width', 'robo-gallery' ); ?>
+	    </label>
 	    <div class="col-sm-10">
 	    <?php echo $field_type_object->input( array(
 						'name'  => $field_type_object->_name( '[width]' ),
@@ -64,7 +66,7 @@ function rbs_border_render_field_callback( $field, $value, $object_id, $object_t
 	</div>
 
 	<div class="form-group">
-    	<label class="col-sm-2 control-label" for="<?php echo $field_type_object->_id( '_style' ); ?>'"><?php _e( 'Style', 'rbs_gallery' ); ?></label>
+    	<label class="col-sm-2 control-label" for="<?php echo $field_type_object->_id( '_style' ); ?>'"><?php _e( 'Style', 'robo-gallery' ); ?></label>
 	    <div class="col-sm-10">
 	      <?php echo $field_type_object->select( array(
 					'name'  => $field_type_object->_name( '[style]' ),
@@ -78,7 +80,7 @@ function rbs_border_render_field_callback( $field, $value, $object_id, $object_t
   	</div>
 
   	<div class="form-group">
-  		<label class="col-sm-2 control-label" for="<?php echo $field_type_object->_id( '_color' ); ?>'"><?php _e( 'Color', 'rbs_gallery' ); ?></label>
+  		<label class="col-sm-2 control-label" for="<?php echo $field_type_object->_id( '_color' ); ?>'"><?php _e( 'Color', 'robo-gallery' ); ?></label>
 	    <div class="col-sm-4">
 	      <?php 
 			echo  $field_type_object->input( array(

@@ -3,12 +3,12 @@
 *      Version: 1.0
 *      By Robosoft
 *
-*      Contact: http://robosoft.co
+*      Contact: https://robosoft.co/robogallery/ 
 *      Created: 2015
 *      Licensed under the GPLv2 license - http://opensource.org/licenses/gpl-2.0.php
 *
 *      Copyright (c) 2014-2016, Robosoft. All rights reserved.
-*      Available only in  http://robosoft.co/robogallery
+*      Available only in  https://robosoft.co/robogallery/ 
 */
 
 jQuery(document).ready( function($){

@@ -3,12 +3,12 @@
 *      Version: 2.4
 *      By Robosoft
 *
-*      Contact: http://robosoft.co
+*      Contact: https://robosoft.co/robogallery/ 
 *      Created: 2016
 *      Licensed under the GPLv2 license - http://opensource.org/licenses/gpl-2.0.php
 *
 *      Copyright (c) 2014-2016, Robosoft. All rights reserved.
-*      Available only in  http://robosoft.co/robogallery
+*      Available only in  https://robosoft.co/robogallery/ 
 */
 
 jQuery(function(){
@@ -38,7 +38,7 @@ jQuery(function(){
 				'text' : 	roboGalleryUpdateProDialog.data('info'),
 				'class' : 	'button-primary rbs_close_dialog',
 				'click' : 	function(){
-					window.open("http://robosoft.co/go.php?product=gallery&task=support",'_blank');
+					window.open("https://robosoft.co/go.php?product=gallery&task=support",'_blank');
 				}
 		}
 		],

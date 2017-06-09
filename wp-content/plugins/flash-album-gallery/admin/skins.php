@@ -387,9 +387,7 @@ function flag_curl_exec_follow($ch, &$maxredirect = null) {
 
 	$mr = $maxredirect === null ? 5 : intval($maxredirect);
 
-	if (filter_var(ini_get('open_basedir'), FILTER_VALIDATE_BOOLEAN) === false
-	                                                                     && filter_var(ini_get('safe_mode'), FILTER_VALIDATE_BOOLEAN) === false
-  ) {
+	if (filter_var(ini_get('open_basedir'), FILTER_VALIDATE_BOOLEAN) === false && FLAG_SAFE_MODE === false) {
 
 		@curl_setopt($ch, CURLOPT_FOLLOWLOCATION, $mr > 0);
 		curl_setopt($ch, CURLOPT_MAXREDIRS, $mr);

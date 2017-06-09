@@ -3,7 +3,7 @@
 Plugin Name: GRAND Flash Album Gallery
 Plugin URI: http://mypgc.co/
 Description: The Grand Flagallery plugin - provides a comprehensive interface for managing photos and images through a set of admin pages, and it displays photos in a way that makes your web site look very professional.
-Version: 4.47
+Version: 4.48
 Author: Rattus
 Author URI: http://codeasily.com/
 Text Domain: flash-album-gallery
@@ -24,7 +24,7 @@ if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) { die('You 
 if (!class_exists('flagLoad')) {
 class flagLoad {
 
-	var $version = '4.47';
+	var $version = '4.48';
 	var $dbversion   = '2.75';
 	var $minium_WP   = '3.0';
 	var $minium_WPMU = '3.0';
@@ -195,12 +195,20 @@ class flagLoad {
 
 		// get value for safe mode
 		if ( !defined('FLAG_SAFE_MODE') ) {
-			if ( (gettype( ini_get('safe_mode') ) == 'string') ) {
-				// if sever did in in a other way
-				if ( ini_get('safe_mode') == 'off' ) define('FLAG_SAFE_MODE', FALSE);
-				else define( 'FLAG_SAFE_MODE', ini_get('safe_mode') );
-			} else
-			define( 'FLAG_SAFE_MODE', ini_get('safe_mode') );
+		    if(version_compare('5.3', phpversion(), '>')){
+                if((gettype(ini_get('safe_mode')) == 'string')){
+                    // if sever did in in a other way
+                    if(ini_get('safe_mode') == 'off'){
+                        define('FLAG_SAFE_MODE', false);
+                    } else{
+                        define('FLAG_SAFE_MODE', ini_get('safe_mode'));
+                    }
+                } else{
+                    define('FLAG_SAFE_MODE', ini_get('safe_mode'));
+                }
+            } else{
+                define('FLAG_SAFE_MODE', false);
+            }
 		}
 
 	}

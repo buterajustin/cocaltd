@@ -4,12 +4,12 @@
 *      Version: 1.0
 *      By Robosoft
 *
-*      Contact: http://robosoft.co
+*      Contact: https://robosoft.co/robogallery/ 
 *      Created: 2015
 *      Licensed under the GPLv2 license - http://opensource.org/licenses/gpl-2.0.php
 *
 *      Copyright (c) 2014-2016, Robosoft. All rights reserved.
-*      Available only in  http://robosoft.co/robogallery
+*      Available only in  https://robosoft.co/robogallery/ 
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -30,25 +30,15 @@ class ROBO_GALLERY_CATEGORY{
         $this->postTypeParams = array();
         //$this->postTypeParams = $postTypeParams;
         $this->assetsUri = plugin_dir_url(__FILE__);
-
-        add_action('add_meta_boxes', array($this, 'addMetaBox'));
-        add_action('admin_enqueue_scripts', array($this, 'enqueueScripts'));
-        add_action("wp_ajax_hierarchy_{$this->postType}_meta_box", array($this, 'ajaxMetaBoxAttributes'));
-        add_action("wp_ajax_hierarchy_{$this->postType}_dialog", array($this, 'ajaxDialog'));
-        add_action("wp_ajax_hierarchy_{$this->postType}_dialog_save", array($this, 'ajaxDialogSave'));
+        if( rbs_gallery_is_edit_page('edit') ){
+	        add_action('add_meta_boxes', array($this, 'addMetaBox'));
+	    }
+	        add_action('admin_enqueue_scripts', array($this, 'enqueueScripts'));
+	        add_action("wp_ajax_hierarchy_{$this->postType}_meta_box", array($this, 'ajaxMetaBoxAttributes'));
+	        add_action("wp_ajax_hierarchy_{$this->postType}_dialog", array($this, 'ajaxDialog'));
+	        add_action("wp_ajax_hierarchy_{$this->postType}_dialog_save", array($this, 'ajaxDialogSave'));
+	    
     }
-
-
-
-    protected function registerPostType(){
-        $params = array_merge(
-            $this->postTypeParams,
-            array('hierarchical' => true)
-        );
-
-        return register_post_type($this->postType, $params);
-    }
-
 
     public function addMetaBox(){
         add_meta_box(
@@ -73,21 +63,21 @@ class ROBO_GALLERY_CATEGORY{
         wp_enqueue_style('wp-jquery-ui-dialog');
         wp_enqueue_style(
             'hierarchy-post-attributes-style',
-            $this->assetsUri . '/css/style.css',
+            $this->assetsUri . 'css/style.css',
             array('wp-jquery-ui-dialog')
         );
 
         wp_enqueue_script('jquery-ui-dialog');
         wp_enqueue_script(
             'hierarchy-post-attributes-nestable-js',
-            $this->assetsUri . '/js/jquery.nestable.js',
+            $this->assetsUri . 'js/jquery.nestable.js',
             array('jquery-ui-dialog'),
             false,
             true
         );
         wp_enqueue_script(
             'hierarchy-post-attributes-js',
-            $this->assetsUri . '/js/script.js',
+            $this->assetsUri . 'js/script.js',
             array('jquery-ui-dialog', 'hierarchy-post-attributes-nestable-js'),
             false,
             true
@@ -173,7 +163,7 @@ class ROBO_GALLERY_CATEGORY{
 
         if (!isset($_POST['post_id'])) {
             header('HTTP/1.0 403 Forbidden');
-            echo __('Post ID is absent in request');
+            echo 'Post ID is absent in request';
             die();
         }
 
@@ -181,7 +171,7 @@ class ROBO_GALLERY_CATEGORY{
         $post  = get_post($postId);
         if (!$post) {
             header('HTTP/1.0 403 Forbidden');
-            echo __(sprintf('Can not find post with ID "%d"', $postId));
+            echo sprintf('Can not find post with ID "%d"', $postId);
             die();
         }
 
@@ -194,14 +184,14 @@ class ROBO_GALLERY_CATEGORY{
 
         if (!isset($_POST['post_type'])) {
             header('HTTP/1.0 403 Forbidden');
-            echo __('Post type is absent in request');
+            echo 'Post type is absent in request';
             die();
         }
 
         $postType = $_POST['post_type'];
         if (!post_type_exists($postType)) {
             header('HTTP/1.0 403 Forbidden');
-            echo __(sprintf('Post type "%s" is not registered', htmlentities($postType)));
+            echo sprintf('Post type "%s" is not registered', htmlentities($postType));
             die();
         }
 
@@ -223,12 +213,12 @@ class ROBO_GALLERY_CATEGORY{
 
         if (!isset($_POST['hierarchy_posts'])) {
             header('HTTP/1.0 403 Forbidden');
-            echo __('Empty posts hierarchy data for saving');
+            echo 'Empty posts hierarchy data for saving';
             die();
         }
         if (!is_array($_POST['hierarchy_posts'])) {
             header('HTTP/1.0 403 Forbidden');
-            echo __('Wrong posts hierarchy data for saving');
+            echo 'Wrong posts hierarchy data for saving';
             die();
         }
 
@@ -306,7 +296,7 @@ class ROBO_GALLERY_CATEGORY{
         $postTypeObject = get_post_type_object($this->postType);
         if (!current_user_can($postTypeObject->cap->edit_posts)) {
             header('HTTP/1.0 403 Forbidden');
-            echo __(sprintf("You don't have permission for editing this %s", $postTypeObject->labels->name));
+            echo sprintf("You don't have permission for editing this %s", $postTypeObject->labels->name);
             die();
         }
     }

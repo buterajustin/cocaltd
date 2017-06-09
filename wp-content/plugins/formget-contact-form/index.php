@@ -3,7 +3,7 @@
   Plugin Name: FormGet Contact Form
   Plugin URI: http://www.formget.com
   Description: FormGet Contact Form is an eassy and effective form builder tool which enable you to bulid and embed form on your website in few steps. With FormGet Contact Form manage all your contact forms and your entire client communication at one single place.
-  Version: 5.4.0
+  Version: 5.4.1
   Author: FormGet
   Author URI: http://www.formget.com
  */
@@ -52,8 +52,22 @@ function formget_mailget_admin_notice() {
     }
 }
 
+function formget_tracking_notice() {
+    global $current_user;
+    $user_id = $current_user->ID;
+
+  /* Check that the user hasn't already clicked to ignore the message */
+        if (!get_user_meta($user_id, 'formget_tracking_ignore_notice')) {
+			  ?>
+			  <div class="updated um-admin-notice"><p>Allow FormGet to send you setup guide? Opt-in to our newsletter and we will immediately e-mail you a setup guide along with 20% discount which you can use to purchase the FormGet extension bundle.</p><p><a href="<?php echo admin_url('admin.php?page=cf_page&fg_page_tracking=allow_tracking');?>" class="button button-primary">Allow Sending</a>&nbsp;<a href="<?php echo admin_url('admin.php?page=cf_page&fg_page_tracking=hide_tracking');?>" class="button-secondary">Do not allow </a></p></div>
+            <?php
+        }
+    
+}
+
 if (isset($_GET['page']) && $_GET['page'] != 'cf_page') {
     add_action('admin_notices', 'formget_mailget_admin_notice');
+	add_action('admin_notices', 'formget_tracking_notice');
 }
 
 
@@ -64,6 +78,30 @@ function formget_mailget_admin_nag_ignore() {
     if (isset($_GET['admin_nag_ignore']) && '0' == $_GET['admin_nag_ignore']) {
 		 add_user_meta($user_id, 'formget_mailget_admin_ignore_notice', 'true', true);
     }
+	
+	if(isset($_GET["fg_page_tracking"]) && $_GET["fg_page_tracking"] == "hide_tracking"){
+		 add_user_meta($user_id, 'formget_tracking_ignore_notice', 'true', true);
+	}
+	if(isset($_GET["fg_page_tracking"]) && $_GET["fg_page_tracking"] == "allow_tracking"){
+		$email = get_option("admin_email");
+		if(isset($email) && $email != ""){
+		$mg_api_key = "EsT96nYTlxED";
+		require_once('inc/mailget_curl.php');
+        $list_arr = array();
+        $mg_obj = new mailget_curl($mg_api_key);
+		$mg_arr = array(array(
+                    'name' => "",
+                    'email' => sanitize_email($email),
+                    'get_date' => date('j-m-y'),
+                    'ip' => ''
+                )
+            );
+        $curt_status = $mg_obj->curl_data($mg_arr, "Ijc1OTcxMyI_3D", 'single');
+        			
+		}
+		add_user_meta($user_id, 'formget_tracking_ignore_notice','true',true);
+		
+	}
 }
 
 add_action('admin_init', 'formget_mailget_admin_nag_ignore');
@@ -76,6 +114,7 @@ function formget_mailget_delete_user_entry() {
     global $current_user;
     $user_id = $current_user->ID;
     delete_user_meta($user_id, 'formget_mailget_admin_ignore_notice', 'true', true);
+	delete_user_meta($user_id, 'formget_tracking_ignore_notice', 'true', true);
 }
 
 register_deactivation_hook(__FILE__, 'formget_mailget_delete_user_entry');

@@ -11,9 +11,9 @@
 (function($) {
 
  	$('.wptools_gigr_block').each(function(index, el) {
- 		var options = {};
- 		if( $(this).data('hidecaption')==1 ) options.hideCaption = 1;
- 		var id = $( this).attr('id');
- 		$('#'+id+' a').swipebox(options);	
+		var options = {};
+		if( $(this).data('hidecaption')==1 ) options.hideCaption = 1;
+		var id = $( this).attr('id');
+		$('#'+id+' a').swipebox(options);	
  	});
 }(jQuery));

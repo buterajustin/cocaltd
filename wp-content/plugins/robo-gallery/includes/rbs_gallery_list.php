@@ -4,12 +4,12 @@
 *      Version: 1.0
 *      By Robosoft
 *
-*      Contact: http://robosoft.co
+*      Contact: https://robosoft.co/robogallery/ 
 *      Created: 2015
 *      Licensed under the GPLv2 license - http://opensource.org/licenses/gpl-2.0.php
 *
 *      Copyright (c) 2014-2016, Robosoft. All rights reserved.
-*      Available only in  http://robosoft.co/robogallery
+*      Available only in  https://robosoft.co/robogallery/ 
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -26,11 +26,11 @@ if(isset($_GET['showproinfo']) && $_GET['showproinfo']){
 			echo '<div id="rbs_showInformation" '
 						.'style="display: none;" '
 						.'data-open="1" '
-						.'data-title="'.__('Get Robo Gallery Pro version', 'rbs_gallery').'" '
-						.'data-close="'.__('Close', 'rbs_gallery').'" '
-						.'data-info="'.__('Get Pro version', 'rbs_gallery').'"'
+						.'data-title="'.__('Get Robo Gallery Pro version', 'robo-gallery').'" '
+						.'data-close="'.__('Close').'" '
+						.'data-info="'.__('Get Pro version', 'robo-gallery').'"'
 					.'>'
-					.__('You can create only 3 galleries. Update to PRO to get unlimited galleries', 'rbs_gallery')
+					.__('You can create only 3 galleries. Update to PRO to get unlimited galleries', 'robo-gallery')
 				.'</div>';
 		}
 		if(!ROBO_GALLERY_PRO) add_action( 'in_admin_header', 'rbs_gallery_showInformation' );
@@ -43,7 +43,7 @@ if(!function_exists('rbs_custom_columns')){
 		case 'rbs_gallery' :
 			global $post;
 			//$slug = '' ; $slug = $post->post_name;
-	        $shortcode = '<span>[robo-gallery id="'.$post->ID.'"]</span>';
+	        $shortcode = '<span>[robo-gallery id='.$post->ID.']</span>';
 		    echo $shortcode; 
 		    break;
 
@@ -64,8 +64,8 @@ if(!function_exists('add_rbs_table_columns')){
 		return array_merge(
 				$columns, 
 				array( 
-					'rbs_gallery_views' => __('Views'), 
-					'rbs_gallery' => __('Shortcode') 
+					'rbs_gallery_views' => __('Views','robo-gallery'), 
+					'rbs_gallery' => __('Shortcode' ,'robo-gallery') 
 				)
 		); 
 	}

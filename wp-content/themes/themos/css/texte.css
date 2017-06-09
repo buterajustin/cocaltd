@@ -1,0 +1,275 @@
+
+
+p {
+margin-bottom:5px;
+padding-bottom:5px;
+}
+
+.titre_bleu {
+	color:#005989;
+	font-size:19px;
+	font-family: 'Homenaje', sans-serif;
+	text-transform:uppercase;
+	letter-spacing: 3px;
+}
+
+.titre_ble2u {
+	color:#005989;
+	font-size:17px;
+	font-family: 'Homenaje', sans-serif;
+	text-transform:uppercase;
+	letter-spacing: 3px;
+}
+
+.titre{
+font-family:Arial, sans-serif;
+font-size:14px;
+color:#648c1c;
+text-transform:uppercase;
+font-weight:bold;
+}
+
+.sstitre{
+font-family:Arial, sans-serif;
+font-size:14px;
+color:#648c1c;
+
+font-weight:bold;
+}
+
+
+.sstitre_bleu{
+font-family:Arial, sans-serif;
+font-size:14px;
+color:#005989;
+font-weight:bold;
+}
+
+.titre_vert{
+font-family:Arial, sans-serif;
+font-weight:bold;
+font-size:14px;
+color:#648c1c;
+text-align:right;
+text-transform:uppercase;
+}
+
+.sstitre_orange{
+font-family:Arial, sans-serif;
+font-weight:bold;
+font-size:12px;
+color:#FF7700;
+}
+
+.sstitre_vert{
+font-family:Arial, sans-serif;
+font-weight:bold;
+font-size:14px;
+color:#00486F;
+}
+
+.texte{
+font-family: Arial, Helvetica, sans-serif;
+font-size:14px;
+}
+
+
+.texte_blanc{
+font-family:Arial, sans-serif;
+font-size:14px;
+color:#FFFFFF;
+}
+
+.texte_bleu{
+	font-family:Arial, sans-serif;
+	font-size:14px;
+	color:#00486F;
+}
+
+.texte_vert{
+font-family:Arial, sans-serif;
+font-size:14px;
+color:#488209;
+}
+
+.texte_rouge{
+font-family:Arial, sans-serif;
+font-size:14px;
+color:#B57A80;
+}
+
+.texte_orange{
+font-family:Arial, sans-serif;
+font-size:14px;
+color:#FAB574;
+}
+
+.legende{
+font-family: Arial, Helvetica, sans-serif;
+font-size:11px;
+font-style: italic ;
+color:#111111;
+}
+
+.image{
+border:1px solid #3AB133 ;
+}
+
+.image_sans_cadre {
+padding:10px;
+}
+
+.couleur_bleu_clair {
+color:#04829B;
+}
+
+.couleur_vert_clair {
+color:#4A8409;
+}
+
+.lien_blanc_mention{
+font-family:Arial, sans-serif;
+font-size:12px;
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.lien_blanc_mention:hover{
+font-family:Arial, sans-serif;
+font-size:12px;
+color:#FFFFFF;
+text-decoration:underline;
+}
+
+.lien_bleu_mention{
+font-family:Arial, sans-serif;
+font-size:12px;
+color:#005888;
+text-decoration:none;
+}
+
+.lien_bleu_mention:hover{
+font-family:Arial, sans-serif;
+font-size:12px;
+color:#005888;
+text-decoration:underline;
+}
+
+
+.lien_bleu_groupe{
+font-family:Arial, sans-serif;
+font-size:14px;
+color:#005888;
+text-decoration:underline;
+font-weight:bold;
+}
+
+.lien_bleu_groupe:hover{
+font-family:Arial, sans-serif;
+font-size:14px;
+color:#005888;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+
+
+.lien_vert_mention{
+font-family:Arial, sans-serif;
+font-size:12px;
+color:#5F9A1E;
+text-decoration:none;
+}
+
+.lien_vert_mention:hover{
+font-family:Arial, sans-serif;
+font-size:12px;
+color:#5F9A1E;
+text-decoration:underline;
+}
+
+.lien_vert_foncer{
+font-family:Arial, sans-serif;
+font-size:12px;
+color:#5FB34B;
+text-decoration:none;
+}
+
+.lien_vert_foncer:hover{
+font-family:Arial, sans-serif;
+font-size:12px;
+color:#5FB34B;
+text-decoration:underline;
+}
+
+
+
+.lien_titre_vert{
+font-family:Arial, sans-serif;
+font-weight:bold;
+font-size:14px;
+color:#488209;
+text-decoration:none;
+}
+.lien_titre_vert:Hover{
+font-family:Arial, sans-serif;
+font-weight:bold;
+font-size:14px;
+color:#488209;
+text-decoration:underline;
+}
+
+.lien_titre_bleu{
+font-family:Arial, sans-serif;
+font-weight:bold;
+font-size:14px;
+color:#00486F;
+text-decoration:none;
+}
+.lien_titre_bleu:Hover{
+font-family:Arial, sans-serif;
+font-weight:bold;
+font-size:14px;
+color:#00486F;
+text-decoration:underline;
+}
+
+.maj_droite{
+	text-align:right;
+	text-transform:uppercase;
+}
+
+.gras{
+font-weight:bold;
+}
+
+/* LIRE SUITE */
+.ls_button{
+	height:13px;
+	margin: 5px 0 0 0;
+	/*text-align:right;*/
+}
+
+.ls_button a {
+	-moz-border-radius: 3px 3px 3px 3px;
+    background: none repeat scroll 0 0;
+    color: #5FB34B;
+   /* float: right;*/
+    font-family: helvetica,arial,sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0 2px 0px;
+    padding: 2px 5px 0 2px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+	list-style-type:none; 
+    width: 10px;cursor:pointer;
+}
+
+	
+.ls_button a:hover{
+	color: #5FB34B;
+	text-decoration:underline;
+	}

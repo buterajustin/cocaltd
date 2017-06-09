@@ -1,7 +1,8 @@
 <?php
 
-if (!class_exists("FinalTilesDB")) {
-	class FinalTilesDB {
+
+if (!class_exists("FinalTilesLiteDB")) {	
+	class FinalTilesLiteDB {
 		
 		private static $pInstance;
 		
@@ -10,7 +11,7 @@ if (!class_exists("FinalTilesDB")) {
 		public static function getInstance() 
 		{
 			if(!self::$pInstance) {
-				self::$pInstance = new FinalTilesDB();
+				self::$pInstance = new FinalTilesLiteDB();
 			}
 			
 			return self::$pInstance;
@@ -206,7 +207,7 @@ if (!class_exists("FinalTilesDB")) {
 			return true;
 		}
 		
-		public function getImagesByGalleryId($gid, $skip, $size) 
+		public function getImagesByGalleryId($gid, $skip=0, $size=0) 
 		{
 			global $wpdb;
 

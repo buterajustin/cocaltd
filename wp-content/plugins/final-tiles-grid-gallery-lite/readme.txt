@@ -1,38 +1,65 @@
-=== Gallery Final Tiles Grid ===
+=== Image Photo Gallery Final Tiles Grid ===
 Contributors: GreenTreeLabs
 Donate link: http://greentreelabs.net/blog/donate/
-Tags: gallery, grid gallery, thumbnail, slider, best gallery, free gallery, best grid gallery, gallery plugin, gallery grid plugin, best grid gallery plugin, social, masonry
+Tags: gallery, grid gallery, best gallery, free gallery, gallery plugin, gallery grid plugin, masonry, photo gallery, image gallery, social gallery, portfolio gallery, lightbox, justified gallery
 Requires at least: 3.8.0
-Tested up to: 4.7.3
+Tested up to: 4.7.4
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Gallery. Probably the best gallery around. Unique gallery layouts: Final Tiles + Masonry, you have to try it! Highly customizable, include a lightbox. Easy and fast!
+Image Gallery + Photo Gallery + Portfolio Gallery + Tiled Gallery in 1 plugin. Includes lightbox and hover effects. It supports Pinterest (masonry) photo gallery and tiled grid gallery.
 
 == Description ==
 
-Build a WordPress gallery with lightbox in 4 easy steps! Use the common masonry layout or create complex and smart grids using the Final Tiles Gallery layout.
+Image Gallery + Photo Gallery + Portfolio Gallery + Tiled Gallery in 1 plugin. Includes lightbox and hover effects. It supports Pinterest (masonry) photo gallery and tiled grid gallery.
 
 = A Brand New Algorithm =
 
-There are dozens of wordpress galleries out there, but the problem is that they always look the same!
-Final Tiles Grid Gallery uses a brand new algorithm to make much more interesting grids, how does it work?
-The main concept is very simple: don't crop the images and keep the original size (when possible). 
+There are dozens of wordpress photo galleries out there, but the problem is that they always look the same!
+Final Tiles Grid Gallery uses a brand new algorithm to make much more interesting image grids, how does it work?
+The main concept is very simple: it doesn't crop the images and it keeps the original size (if possible). 
 
-This is a completely new way to build galleries because now you can think of the images like they were
-the tiles of a puzzle with different sizes, so you can use a bigger size for a cover image, for example.
+This is a completely new way to build photo galleries because now you can think of the images like they were tiles with different sizes, so you can use a bigger size for a cover image, for example.
 
-The gallery is fully responsive and it adapts to the browser using a nice and smooth animation, even on
-mobile devices because it can use the hardware acceleration taking advantage of CSS3 properties.
+The image photo gallery is fully responsive and it adapts to the browser using a nice and smooth animation, even on mobile devices because it can use the hardware acceleration taking advantage of CSS3 properties.
 
-This plugin is perfect for you if you need:
+This gallery plugin is perfect for you if you need:
 
-* a wedding album
-* a designer portfolio
-* a photography portfolio
-* a products showcase
+* wedding album photo gallery
+* designer portfolio photo gallery
+* photography portfolio photo gallery
+* products showcase photo gallery
 
+= Features =
+
+* responsive
+* 2 available layouts: Tiles and Columns (masonry)
+* adjust margin between images
+* adjust image rendered size based on current screen size
+* sort images manually or randomly
+* 1 lightbox + support for [EverlightBox](https://wordpress.org/plugins/search/everlightbox/)
+* social sharing
+* video gallery
+
+= PRO version features =
+
+Final Tiles Gallery Lite is a very complete plugin but if you want the best experience consider buying a PRO license. The PRO version has all features of Lite version plus:
+
+* filters / categories
+* 7 lightbox +  support for [EverlightBox](https://wordpress.org/plugins/search/everlightbox/)
+* different lightbox for mobile devices
+* caption hover effects
+* image hover effects
+* image loaded effects
+* WooCommerce support
+* recent posts / custom posts galleries
+
+If you love the Lite version and it’s enough for your needs but you want to say “thanks!” you can always buy a [present](http://amzn.eu/5SP6qpj) ;)
+
+If you instead want to upgrade and unlock all the cool features then you can [buy a license](http://1.envato.market/c/288541/275988/4415?u=http%3A%2F%2F1.envato.market%2Fc%2F288541%2F275988%2F4415%3Fu%3Dhttp%253A%252F%252Fcodecanyon.net%252Fitem%252Ffinal-tiles-grid-gallery-for-wordpress%252F5189351).
+
+The “Final” layout can’t ensure you have a justified edge at the bottom of the gallery. If you have this requirement then you can use the “Masonry” layout and use images with same height, that way you can make a justified gallery.
 
 == Installation ==
 
@@ -76,11 +103,15 @@ Have a look at this [video tutorial](https://www.youtube.com/watch?v=RNT4JGjtyrs
 
 = Why does some image look blurry ? =
 
-Under some circumstances the images have to be enlared a bit to avoid gaps. To avoid a blurry effect you can decrease the "Image size factor" setting. 
+Under some circumstances the images have to be enlarged a bit to avoid gaps. To avoid a blurry effect you can decrease the "Image size factor" setting. 
 
 = I want to use another lightbox instead of the provided one =
 
 The PRO license bundles 7 different lightboxes. However you can use any other lightbox you want also with the Lite license. If you have installed a lightbox plugin then you just need to select "Direct link to image" in the "Lightbox" settings.
+
+= Can I import galleries from other plugins? =
+
+Currently galleries made with Envira, FooGallery, Instagram, NextGen, JetPack, Modula, etc cannot be imported.
 
 = How can I get support? =
 
@@ -103,6 +134,13 @@ The PRO license bundles 7 different lightboxes. However you can use any other li
 6. 52 pages documentation
 
 == Changelog ==
+
+= 3.0.4 = 
+* [Fix] Fixed bug in FinalTilesLiteDB::getImagesByGalleryId()
+
+= 3.0.3 = 
+* [Enhancement] Backend UI tweaks
+* [Add] Functionalities for usage analysis
 
 = 3.0.2 = 
 * [Add] Support for servers without PHP iconv extension
@@ -173,6 +211,13 @@ The PRO license bundles 7 different lightboxes. However you can use any other li
 * First release
 
 == Upgrade Notice ==
+
+= 3.0.4 = 
+* [Fix] Fixed bug in FinalTilesLiteDB::getImagesByGalleryId()
+
+= 3.0.3 = 
+* [Enhancement] Backend UI tweaks
+* [Add] Functionalities for usage analysis
 
 = 1.1 =
 * This version fixes a critical bug that prevented to activate the plugin.

@@ -13,8 +13,8 @@ if ( ! defined( 'WPINC' ) )  die;
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 class wpTools_GIGV_Activator {
-	public static function start() { add_option( 'wpTools_GIGV_BeforeActivator', 'start' ); }
-	public static function end() {
+			public static function start() { add_option( 'wpTools_GIGV_BeforeActivator', 'start' ); }
+			public static function end() {
 		//echo 
 	}
 }

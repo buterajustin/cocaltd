@@ -4,12 +4,12 @@
 *      Version: 2.6.6
 *      By Robosoft
 *
-*      Contact: http://robosoft.co
+*      Contact: https://robosoft.co/robogallery/ 
 *      Created: 2017
 *      Licensed under the GPLv2 license - http://opensource.org/licenses/gpl-2.0.php
 *
 *      Copyright (c) 2014-2017, Robosoft. All rights reserved.
-*      Available only in  http://robosoft.co/robogallery
+*      Available only in  https://robosoft.co/robogallery/ 
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -92,8 +92,7 @@ class roboGallery extends roboGalleryUtils{
 		    delete_post_meta($this->id, $count_key);
 		    add_post_meta($this->id, $count_key, '0');
 		}
-		$countView++;
-		update_post_meta($this->id, $count_key, $countView);
+		update_post_meta($this->id, $count_key, ++$countView);
  	}
 
  	function __construct($attr){
@@ -104,7 +103,7 @@ class roboGallery extends roboGalleryUtils{
 
 			$this->id = $attr['id'];
 			
-			$this->updateCountView();
+
 
 			$options_id = (int) get_post_meta( $this->id, ROBO_GALLERY_PREFIX.'options', true );
 			if($options_id){
@@ -183,6 +182,8 @@ class roboGallery extends roboGalleryUtils{
 
  	public function getGallery( ){
  		if( !$this->id ) return ''; 
+
+ 		$this->updateCountView();
 
  		//$galleryImages = get_post_meta( $this->options_id && $this->real_id ? $this->real_id : $this->id, ROBO_GALLERY_PREFIX.'galleryImages', true );;
  		//if( !$galleryImages || !is_array( $galleryImages ) || !count($galleryImages) || !(int)$galleryImages[0] ) return '';

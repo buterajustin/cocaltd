@@ -1,13 +1,13 @@
 <?php
 /*
 Plugin Name: Robo Gallery
-Description: Gallery modes photo gallery, images gallery, video gallery, Polaroid gallery, gallery lighbox, portfolio gallery, responsive gallery
-Version: 2.6.9
+Description: Gallery modes photo gallery, images gallery, video gallery, Polaroid gallery, gallery lightbox, portfolio gallery, responsive gallery
+Version: 2.6.13
 Author: RoboSoft
-Plugin URI: http://robosoft.co/gallery
-Author URI: http://robosoft.co/gallery
+Plugin URI: https://robosoft.co/gallery
+Author URI: https://robosoft.co/gallery
 License: GPLv3 or later
-Text Domain: rbs_gallery
+Text Domain: robo-gallery
 Domain Path: /languages
 */
 
@@ -15,17 +15,17 @@ if(!defined('WPINC'))die;
 if(!defined("ABSPATH"))exit;
 
 define("ROBO_GALLERY", 1); 
-define("ROBO_GALLERY_VERSION", '2.6.9'); 
+define("ROBO_GALLERY_VERSION", '2.6.13'); 
 
 if( !defined("ROBO_GALLERY_PATH") ) define("ROBO_GALLERY_PATH", plugin_dir_path( __FILE__ ));
 
-define("ROBO_GALLERY_SPECIAL", 0); 
+define("ROBO_GALLERY_SPECIAL", 1); 
 define("ROBO_GALLERY_EVENT_DATE", '2016-12-08'); 
 define("ROBO_GALLERY_EVENT_HOUR", 20); 
 
 add_action( 'plugins_loaded', 'rbs_gallery_load_textdomain' );
 function rbs_gallery_load_textdomain() {
-  load_plugin_textdomain( 'rbs_gallery', false, dirname(plugin_basename( __FILE__ )) . '/languages' ); 
+  load_plugin_textdomain( 'robo-gallery', false, dirname(plugin_basename( __FILE__ )) . '/languages' ); 
 }
 
 if(!function_exists('rbs_gallery_pro_check')){

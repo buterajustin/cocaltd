@@ -4,12 +4,12 @@
 *      Version: 1.0
 *      By Robosoft
 *
-*      Contact: http://robosoft.co
+*      Contact: https://robosoft.co/robogallery/ 
 *      Created: 2015
 *      Licensed under the GPLv2 license - http://opensource.org/licenses/gpl-2.0.php
 *
 *      Copyright (c) 2014-2016, Robosoft. All rights reserved.
-*      Available only in  http://robosoft.co/robogallery
+*      Available only in  https://robosoft.co/robogallery/ 
 */
 
 function rbs_padding_field( $metakey, $post_id = 0 ) {
@@ -43,7 +43,7 @@ function rbs_padding_field_callback( $field, $value, $object_id, $object_type, $
 
 	    <div class="col-xs-5 col-sm-3<?php echo ($level?' rbs_disabled':'') ?>"> 
 	    	<div class="input-group">
-      			<div class="input-group-addon"><?php _e('Left', 'rbs_gallery'); ?></div>
+      			<div class="input-group-addon"><?php _e('Left', 'robo-gallery'); ?></div>
 			    <?php 
 			    echo $field_type_object->input( array(
 					'name'  		=> $field_type_object->_name('[left]' ),
@@ -57,7 +57,7 @@ function rbs_padding_field_callback( $field, $value, $object_id, $object_type, $
 
 		<div class="col-xs-5 col-sm-3<?php echo ($level?' rbs_disabled':'') ?>"> 
 	    	<div class="input-group">
-      			<div class="input-group-addon"><?php _e('Top', 'rbs_gallery'); ?></div>
+      			<div class="input-group-addon"><?php _e('Top', 'robo-gallery'); ?></div>
 			    <?php 
 			    echo $field_type_object->input( array(
 					'name'  		=> $field_type_object->_name('[top]' ),
@@ -75,7 +75,7 @@ function rbs_padding_field_callback( $field, $value, $object_id, $object_type, $
 
 		<div class="col-xs-5 col-sm-3<?php echo ($level?' rbs_disabled':'') ?>"> 
 	    	<div class="input-group">
-      			<div class="input-group-addon"><?php _e('Right', 'rbs_gallery'); ?></div>
+      			<div class="input-group-addon"><?php _e('Right', 'robo-gallery'); ?></div>
 			    <?php 
 			    echo $field_type_object->input( array(
 					'name'  		=> $field_type_object->_name('[right]' ),
@@ -89,7 +89,7 @@ function rbs_padding_field_callback( $field, $value, $object_id, $object_type, $
 
 		<div class="col-xs-5 col-sm-3<?php echo ($level?' rbs_disabled':'') ?>"> 
 	    	<div class="input-group">
-      			<div class="input-group-addon"><?php _e('Bottom', 'rbs_gallery'); ?></div>
+      			<div class="input-group-addon"><?php _e('Bottom', 'robo-gallery'); ?></div>
 			    <?php 
 			    echo $field_type_object->input( array(
 					'name'  		=> $field_type_object->_name('[bottom]' ),

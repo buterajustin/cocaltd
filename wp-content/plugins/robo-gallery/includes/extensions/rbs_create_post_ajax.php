@@ -4,12 +4,12 @@
 *      Version: 2.0
 *      By Robosoft
 *
-*      Contact: http://robosoft.co
+*      Contact: https://robosoft.co/robogallery/ 
 *      Created: 2015
 *      Licensed under the GPLv2 license - http://opensource.org/licenses/gpl-2.0.php
 *
 *      Copyright (c) 2014-2016, Robosoft. All rights reserved.
-*      Available only in  http://robosoft.co/robogallery
+*      Available only in  https://robosoft.co/robogallery/ 
 */
 
 if ( ! defined( 'WPINC' ) )  die;
@@ -41,17 +41,17 @@ if(!function_exists('rbs_ajax_create_article_form')){
 			'value_field'	     => 'term_id',	
 		);
 		if( !isset($_POST['galleryid']) || !(int)$_POST['galleryid'] ){
-			echo '<p><strong>'.__('Post not created. Error: ','rbs_gallery').'</strong>'.__('Empty  gallery ID','rbs_gallery').'</p>';
+			echo '<p><strong>Post not created. Error: </strong>Empty  gallery ID</p>';
 			return ;
 		} ; 
 		$galleryid = (int) $_POST['galleryid'];
 		$post_info = get_post($galleryid );
 
 		if( gettype($post_info)!='object' ) {
-			echo '<p><strong>'.__('Post not created. Error: ','rbs_gallery').'</strong>'.__('Incorrect  gallery ID','rbs_gallery').'</p>';
+			echo '<p><strong>Post not created. Error: </strong> Incorrect  gallery ID</p>';
 			return ;
 		}
-		echo "<h3>".__('Add new post','rbs_gallery')."</h3>";
+		echo "<h3>".__('Add new post','robo-gallery')."</h3>";
 		?>
 		<table class="form-table">
 			<tbody>
@@ -79,7 +79,7 @@ if(!function_exists('rbs_ajax_create_article_form')){
 		</table>
 		<?php
 		
-		echo '<p>'.__('Short tag of the gallery will be insert into created article.','rbs_gallery').'</p>';
+		echo '<p>'.__('Short tag of the gallery will be insert into created article.','robo-gallery').'</p>';
 	}
 }
 
@@ -95,7 +95,7 @@ if(!function_exists('rbs_ajax_create_article')){
 			$post_info = get_post( $galleryid );
 			
 			if( gettype($post_info)!='object' ) {
-				echo '<p><strong>'.__('Post not created. Error: ','rbs_gallery').'</strong>empty gallery id</p>';
+				echo '<p><strong>Post not created. Error: </strong>empty gallery id</p>';
 				die();
 			}
 	
@@ -130,7 +130,7 @@ if(!function_exists('rbs_ajax_create_article')){
 			update_post_meta($galleryid, 'rbs_gallery_id', json_encode($posts_id, JSON_FORCE_OBJECT ));
 
 			if( isset($Poster->errors) && count($Poster->errors) ){
-				echo '<p><strong>'.__('Post not created. Error: ','rbs_gallery').'</strong><br>';
+				echo '<p><strong>Post not created. Error: </strong><br>';
 				for ($i=0; $i < count($Poster->errors); $i++) { 
 					$error = $Poster->errors[$i];
 					echo ' &nbsp;&nbsp; - '.$error.'<br>';
@@ -149,7 +149,7 @@ if(!function_exists('rbs_ajax_create_article')){
 					 
 			}
 		} else {
-			echo '<p><strong>'.__('Error: input value','rbs_gallery').'</strong></p>';
+			echo '<p><strong>Error: input value</strong></p>';
 		}
 		die();
 	}
@@ -160,14 +160,14 @@ if(!function_exists('rbs_ajax_posts_list')){
 	function rbs_ajax_posts_list(){ 
 		
 		if( !isset($_POST['galleryid']) || !((int)$_POST['galleryid']) ){
-			echo '<p><strong>'.__('Error').': </strong>'.__('Empty gallery ID','rbs_gallery').'</p>';
+			echo '<p><strong>Error: </strong>Empty gallery ID</p>';
 			return ;
 		} ; 
 		$galleryid = (int) $_POST['galleryid'];
 		$posts = get_post_meta( $galleryid, 'rbs_gallery_id' , true);
 
 		if(!count($posts)){
-			e_('No post','rbs_gallery');
+			e_('No post','robo-gallery');
 			die();
 		}
 
@@ -219,7 +219,7 @@ if(!function_exists('rbs_ajax_reset_views')){
 	function rbs_ajax_reset_views(){ 
 		
 		if( !isset($_POST['galleryid']) || ! ((int) $_POST['galleryid']) ){
-			echo '<p><strong>'.__('Error: ','rbs_gallery').'</strong>'.__('Empty  gallery ID','rbs_gallery').'</p>';
+			echo '<p><strong>Error: </strong>Empty  gallery ID</p>';
 			return ;
 		} ; 
 		$galleryId =  (int) $_POST['galleryid'];

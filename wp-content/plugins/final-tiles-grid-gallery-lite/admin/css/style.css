@@ -656,3 +656,11 @@
 .cf {
   *zoom: 1;
 }
+
+#fs_connect {
+  margin: 60px auto !important;
+}
+#fs_connect .fs-visual .dashicons-wordpress {
+  height: 76px !important;
+  width: 76px !important;
+}

@@ -4,12 +4,12 @@
 *      Version: 1.0
 *      By Robosoft
 *
-*      Contact: http://robosoft.co
+*      Contact: https://robosoft.co/robogallery/ 
 *      Created: 2015
 *      Licensed under the GPLv2 license - http://opensource.org/licenses/gpl-2.0.php
 *
 *      Copyright (c) 2014-2016, Robosoft. All rights reserved.
-*      Available only in  http://robosoft.co/robogallery
+*      Available only in  https://robosoft.co/robogallery/ 
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -18,10 +18,10 @@ define( "ROBO_GALLERY_PREFIX",     'rsg_');
 define( "ROBO_GALLERY_TYPE_POST",  'robo_gallery_table');
 
 define( "ROBO_GALLERY_ICON_PRO",  '<button type="button"  class="btn btn-danger btn-xs rbs-label-pro">Pro</button>');
-define( "ROBO_GALLERY_LABEL_PRO", '<span>'.__( 'Available in', 'rbs_gallery' ).'</span> '.ROBO_GALLERY_ICON_PRO);
+define( "ROBO_GALLERY_LABEL_PRO", '<span>'.__( 'Available in', 'robo-gallery' ).'</span> '.ROBO_GALLERY_ICON_PRO);
 
 define( "ROBO_GALLERY_ICON_UPDATE_PRO",  '<button type="button"  class="btn btn-success btn-xs rbs-label-pro">Pro</button>');
-define( "ROBO_GALLERY_LABEL_UPDATE_PRO", '<span>'.__( 'Please update ', 'rbs_gallery' ).'</span> '.ROBO_GALLERY_ICON_UPDATE_PRO.'<span>'.__( ' key', 'rbs_gallery' ).'</span> ');
+define( "ROBO_GALLERY_LABEL_UPDATE_PRO", '<span>'.__( 'Please update ', 'robo-gallery' ).'</span> '.ROBO_GALLERY_ICON_UPDATE_PRO.'<span>'.__( ' key', 'robo-gallery' ).'</span> ');
 
 if(!function_exists('rbs_gallery_include')){
 	function rbs_gallery_include( $filesForInclude, $path = '' ){
@@ -76,11 +76,11 @@ function create_post_type_robo_gallery() {
         array(
           'labels' => array(
             'name' => 'Robo Gallery',
-            'singular_name' => _x( 'Robo Gallery', 		'post type singular name', 'rbs_gallery' ),
-            'all_items'     => __( 'Galleries List', 	'rbs_gallery' ),
-            'add_new'       => __( 'Add Gallery', 		'rbs_gallery' ),
-            'add_new_item'  => __( 'Add Gallery', 		'rbs_gallery' ),
-            'edit_item'     => __( 'Edit Gallery', 		'rbs_gallery' ),
+            'singular_name' => __( 'Robo Gallery', 	 	'robo-gallery' ),
+            'all_items'     => __( 'Galleries List', 	'robo-gallery' ),
+            'add_new'       => __( 'Add Gallery', 		'robo-gallery' ),
+            'add_new_item'  => __( 'Add Gallery', 		'robo-gallery' ),
+            'edit_item'     => __( 'Edit Gallery', 		'robo-gallery' ),
           ),
 
           'rewrite'         => array( 'slug' => 'gallery', 'with_front' => true ),
@@ -106,19 +106,6 @@ if(!function_exists('rbs_gallery_main_init')){
 
 		if( rbs_gallery_get_current_post_type() == ROBO_GALLERY_TYPE_POST && !ROBO_GALLERY_PRO  ){
 		    rbs_gallery_include('rbs_gallery_topblock.php', ROBO_GALLERY_INCLUDES_PATH);
-		}
-
-		if( rbs_gallery_get_current_post_type() == ROBO_GALLERY_TYPE_POST &&  rbs_gallery_is_edit_page('new') && !ROBO_GALLERY_PRO ){
-		    if(!function_exists('rbs_gallery_redirect')){
-		    	function rbs_gallery_redirect (){
-		    		 $n=1;
-		        	$my_wp_query = new WP_Query();
-		        	++$n;
-		        	$all_wp_pages = $my_wp_query->query(array('post_type' => ROBO_GALLERY_TYPE_POST,'post_status' => array('any','trash')));
-		        	if( count($all_wp_pages) >= ++$n ) wp_redirect( "edit.php?post_type=robo_gallery_table&showproinfo=1" );
-		    	}
-		    	add_action( 'load-post-new.php', 'rbs_gallery_redirect' );  
-		    }  
 		}
 
 		if( rbs_gallery_get_current_post_type() == ROBO_GALLERY_TYPE_POST && ( rbs_gallery_is_edit_page('new') || rbs_gallery_is_edit_page('edit') ) ){

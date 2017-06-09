@@ -4,11 +4,64 @@ Plugin Name: Final Tiles Grid Gallery Lite
 Plugin URI: http://codecanyon.net/item/final-tiles-gallery-for-wordpress/5189351?ref=GreenTreeLabs
 Description: Wordpress Plugin for creating responsive image galleries. By: Green Tree Labs
 Author: Green Tree Labs
-Version: 3.0.2
+Version: 3.0.4
 Author URI: http://codecanyon.net/user/GreenTreeLabs
 */
+define("FTGLITEVERSION", "3.0.4");
+// Create a helper function for easy SDK access.
+function ftggl_fs() {
+    global $ftggl_fs;
 
-define("FTGLITEVERSION", "3.0.2");
+    if ( ! isset( $ftggl_fs ) ) {
+        // Include Freemius SDK.
+        require_once dirname(__FILE__) . '/freemius/start.php';
+
+        $ftggl_fs = fs_dynamic_init( array(
+            'id'                  => '1002',
+            'slug'                => 'final-tiles-grid-gallery-lite',
+            'type'                => 'plugin',
+            'public_key'          => 'pk_d0e075b84d491d510a1d0a21087af',
+            'is_premium'          => false,
+            'has_addons'          => false,
+            'has_paid_plans'      => false,
+            'menu'                => array(
+                'slug'            => "ftg-lite-gallery-admin",
+                'account'        => false,
+                'contact'        => false,
+                'support'        => false,
+            ),
+        ) );
+    }
+
+    return $ftggl_fs;
+}
+
+// Init Freemius.
+ftggl_fs();
+// Signal that SDK was initiated.
+do_action( 'ftggl_fs_loaded' );
+
+function ftggl_fs_custom_connect_message_on_update(
+        $message,
+        $user_first_name,
+        $plugin_title,
+        $user_login,
+        $site_link,
+        $freemius_link
+    ) {
+        return sprintf(
+            __fs( 'hey-x' ) . '<br>' .
+            __( 'Please help us improve %2$s! If you opt-in, some data about your usage of %2$s will be sent to %5$s. If you skip this, that\'s okay! %2$s will still work just fine.<br><br>The main reason we need this analytics is understanding how admin UI is used and how we can improve it.', 'final-tiles-grid-gallery-lite' ),
+            $user_first_name,
+            '<b>' . $plugin_title . '</b>',
+            '<b>' . $user_login . '</b>',
+            $site_link,
+            $freemius_link
+        );
+    }
+
+    ftggl_fs()->add_filter('connect_message_on_update', 'ftggl_fs_custom_connect_message_on_update', 10, 6);
+
 define("PRO_CALL", "<span class='procall'>(<a href='http://1.envato.market/c/288541/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Ffinal-tiles-wordpress-gallery%2F5189351' target='_blank'>available with PRO version</a>)</span>");
 define("PRO_UNLOCK", "<a href='http://1.envato.market/c/288541/275988/4415?u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Ffinal-tiles-wordpress-gallery%2F5189351' target='_blank'>Add unlimited images with PRO version</a>");
 
@@ -382,7 +435,7 @@ if (!class_exists("FinalTiles_GalleryLite"))
         public function create_db_conn()
         {
             require('lib/db-class.php');
-            $FinalTilesdb = FinalTilesDB::getInstance();
+            $FinalTilesdb = FinalTilesLiteDB::getInstance();
             return $FinalTilesdb;
         }
 

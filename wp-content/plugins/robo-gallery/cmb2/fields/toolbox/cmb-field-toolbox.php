@@ -4,12 +4,12 @@
 *      Version: 1.0
 *      By Robosoft
 *
-*      Contact: http://robosoft.co
+*      Contact: https://robosoft.co/robogallery/ 
 *      Created: 2015
 *      Licensed under the GPLv2 license - http://opensource.org/licenses/gpl-2.0.php
 *
 *      Copyright (c) 2014-2016, Robosoft. All rights reserved.
-*      Available only in  http://robosoft.co/robogallery
+*      Available only in  https://robosoft.co/robogallery/ 
 */
 
 
@@ -57,11 +57,11 @@ class RBS_TOOLBOX {
 						.'style="display: none;" '
 						.'data-body="rbs_edit" '
 						.'data-open="0" '
-						.'data-title="'.__('Get Robo Gallery Pro version', 'rbs_gallery').'" '
-						.'data-close="'.__('Close', 'rbs_gallery').'" '
-						.'data-info="'.__('Get Pro version', 'rbs_gallery').'"'
+						.'data-title="'.__('Get Robo Gallery Pro version', 'robo-gallery').'" '
+						.'data-close="'.__('Close', 'robo-gallery').'" '
+						.'data-info="'.__('Get Pro version', 'robo-gallery').'"'
 					.'>'
-					.__('This function available in PRO version', 'rbs_gallery')
+					.__('This function available in PRO version', 'robo-gallery')
 				.'</div>';
 	}
 
@@ -70,15 +70,15 @@ class RBS_TOOLBOX {
 						.'style="display: none;" '
 						.'data-body="rbs_edit" '
 						.'data-open="0" '
-						.'data-title="'.__('Update Robo Gallery PRO Key', 'rbs_gallery').'" '
-						.'data-close="'.__('Close', 'rbs_gallery').'" '
-						.'data-info="'.__('Goto Clients section', 'rbs_gallery').'"'
+						.'data-title="'.__('Update Robo Gallery PRO Key', 'robo-gallery').'" '
+						.'data-close="'.__('Close', 'robo-gallery').'" '
+						.'data-info="'.__('Goto Clients section', 'robo-gallery').'"'
 					.'>'
 					.__('This function available in latest versions of the plugin. <br/>
-							Please login to <a href="http://robosoft.co/clients/" target="_blank">client member place section</a>  and download latest version of the <strong>Robo Gallery Key plugin</strong>.<br/><br/>
+							Please login to <a href="https://robosoft.co/clients/" target="_blank">client member place section</a>  and download latest version of the <strong>Robo Gallery Key plugin</strong>.<br/><br/>
 							Install this key on the website and all features will be enabled.<br/>
 							All previous functionality will be available with old Pro Key. <br/>
-							Update required only for the case if you wish to enable all latest functions implemented in new version of the plugin.', 'rbs_gallery')
+							Update required only for the case if you wish to enable all latest functions implemented in new version of the plugin.', 'robo-gallery')
 				.'</div>';
 	}
 
@@ -131,7 +131,7 @@ class RBS_TOOLBOX {
 		wp_register_script( 'rbs-toolbox-admin-edit', ROBO_GALLERY_URL.'js/admin/edit.js', 	array( 'jquery' ), ROBO_GALLERY_VERSION, true );
 		
 		$translation_array = array(
-			'rbs_info_clone_text' => __( 'disabled because you select gallery clone option', 'rbs_robo_gallery' ),
+			'rbs_info_clone_text' => __( 'disabled because you select gallery clone option', 'robo-gallery' ),
 		);
 		wp_localize_script( 'rbs-toolbox-admin-edit', 'rbs_toolbox_translation', $translation_array );
 		wp_enqueue_script(  'rbs-toolbox-admin-edit' );

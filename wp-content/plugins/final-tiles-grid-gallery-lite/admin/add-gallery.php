@@ -50,7 +50,7 @@
 	                	<select class="browser-default" name="ftg_wp_field_caption">
 	                		<option value="none"> Don't use captions </option>
 	                		<option value="title"> Title  </option>
-	                		<option value="caption"> Caption  </option>
+	                		<option selected value="caption"> Caption  </option>
 	                		<option value="description"> Description  </option>
 	                	</select>	              
 	            </div>
@@ -59,38 +59,9 @@
 	                <h5><?php _e('WordPress field for titles:','final-tiles-gallery')?></h5>
 	                	<select class="browser-default" name="ftg_wp_field_title">
 	                		<option value="none"> Don't use titles </option>
-	                		<option value="title"> Title  </option>
+	                		<option selected value="title"> Title  </option>
 	                		<option value="description"> Description  </option>
 	                	</select>	              
-	            </div>
-	            <!--
-	                <div class="field">
-	                	<h5>Caption behavior:</h5>
-	                	<p>
-	                		<input class="with-gap" type="radio" name="ftg_captionBehavior" value="hidden" checked="checked" id="behavior1" />
-	                		<label for="behavior1">Hidden, show it on mouse hover</label>
-	                	</p>
-	                	<p>
-	                		<input class="with-gap" type="radio" name="ftg_captionBehavior" value="visible" id="behavior2" />
-	                		<label for="behavior2">Visible, hide it on mouse hover</label>
-	                	</p>
-	                	<p>
-	                		<input class="with-gap" type="radio" name="ftg_captionBehavior" value="always-visible" id="behavior3" />
-	                		<label for="behavior3" class="line">Always visible</label>
-	                	</p>
-	                </div>
-	                -->
-	            <div class="field">
-	                <h5><?php _e('Caption effect:','final-tiles-gallery')?></h5>
-	                <select class="browser-default" name="ftg_captionEffect">
-	                    <option value="fade"><?php _e('Fade','final-tiles-gallery')?></option>
-	                    <option value="slide-top"><?php _e('Slide from top','final-tiles-gallery')?></option>
-	                    <option value="slide-bottom"><?php _e('Slide from bottom','final-tiles-gallery')?></option>
-	                    <option value="slide-left"><?php _e('Slide from left','final-tiles-gallery')?></option>
-	                    <option value="slide-right"><?php _e('Slide from right','final-tiles-gallery')?></option>
-	                    <option value="rotate-left"><?php _e('Rotate from left','final-tiles-gallery')?></option>
-	                    <option value="rotate-right"><?php _e('Rotate from right','final-tiles-gallery')?></option>
-	                </select>
 	            </div>
 	        </fieldset>
 	        <fieldset data-step="3" data-branch="posts">
@@ -132,8 +103,8 @@
 	            <div class="field">
 	                <h5><?php _e('Choose the layout','final-tiles-gallery')?></h5>
 	                <select class="browser-default" name="layout">
-		                <option value="final">Final Tiles Gallery</option>
-		                <option value="columns">Masonry</option>
+		                <option value="final">Final Tiles Gallery (mixed image width)</option>
+		                <option value="columns">Masonry (columns, same image width)</option>
 	                </select>	                
 	            </div>
 	            <div class="field">

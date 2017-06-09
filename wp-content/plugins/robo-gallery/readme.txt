@@ -1,22 +1,22 @@
 === Gallery - Photo Gallery and Images Gallery ===
 Contributors: gallerysupport, robosoft
-Donate link: http://robosoft.co/robogallery
+Donate link: https://robosoft.co/robogallery
 Tags: gallery, photo gallery, images gallery, gallery images, responsive gallery, categories gallery, Polaroid gallery, gallery lightbox, portfolio gallery, video gallery, Gallery Plugin, Robo Gallery
 Requires at least: 3.3
 Tested up to: 4.7
-Stable tag: 2.6.9
+Stable tag: 2.6.13
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Gallery modes photo gallery, images gallery, video gallery, Polaroid gallery, gallery lighbox, portfolio gallery, responsive gallery 
+Gallery modes photo gallery, images gallery, video gallery, Polaroid gallery, gallery lightbox, portfolio gallery, responsive gallery 
 
 == Description ==
 
 = Gallery - Robo Gallery =
 
-#### [Gallery Most Easy and Powerful plugin to create attractive image section on your WordPress website.](http://robosoft.co/robogallery/#overview)
+#### [Gallery Most Easy and Powerful plugin to create attractive image section on your WordPress website.](https://robosoft.co/robogallery/#overview)
 
-#### Gallery on your website it's really attractive and very important part of your pages. If you looking for fast, easy gallery with simple and very beautiful, highly customizable design [here is it...](http://robosoft.co/robogallery/#overview) Gallery where even newbie in Wordpress will be able to create your first gallery in few minutes and at the same time Wordpress professionals get advanced tools and freedom of creativity. Just download this Gallery and you'll not look for any other gallery any more! [Fall in Love with this Gallery like we do!](http://robosoft.co/robogallery/#overview)
+#### Gallery on your website it's really attractive and very important part of your pages. If you looking for fast, easy gallery with simple and very beautiful, highly customizable design [here is it...](https://robosoft.co/robogallery/#overview) Gallery where even newbie in Wordpress will be able to create your first gallery in few minutes and at the same time Wordpress professionals get advanced tools and freedom of creativity. Just download this Gallery and you'll not look for any other gallery any more! [Fall in Love with this Gallery like we do!](https://robosoft.co/robogallery/#overview)
 
 > #### New function 
 >
@@ -29,17 +29,17 @@ Gallery modes photo gallery, images gallery, video gallery, Polaroid gallery, ga
 
 > #### Gallery Demos 
 >
->[Multi Categories Cars Gallery Demo](http://robosoft.co/demo/gallery/cars-gallery-demo/)
+>[Multi Categories Cars Gallery Demo](https://robosoft.co/demo/gallery/cars-gallery-demo/)
 >
->[Grid Layout Gallery Demo with Fade hover effect](http://robosoft.co/demo/gallery/custom-layout/)
+>[Grid Layout Gallery Demo with Fade hover effect](https://robosoft.co/demo/gallery/custom-layout/)
 >
->[Multi Categories Polaroid style Movie Gallery Demo with classic layout](http://robosoft.co/demo/gallery/gallery-demo-movie/)
+>[Multi Categories Polaroid style Movie Gallery Demo with classic layout](https://robosoft.co/demo/gallery/gallery-demo-movie/)
 >
->[Design Sketch Gallery Demo with grid layout](http://robosoft.co/demo/gallery/gallery-design/)
+>[Design Sketch Gallery Demo with grid layout](https://robosoft.co/demo/gallery/gallery-design/)
 >
->[Multi Categories Gallery Demo with custom interface colors and classic layout](http://robosoft.co/demo/gallery/push-effect-demo/)
+>[Multi Categories Gallery Demo with custom interface colors and classic layout](https://robosoft.co/demo/gallery/push-effect-demo/)
 >
->[Video Gallery Demo with grid layout](http://robosoft.co/demo/gallery/design-video-gallery)
+>[Video Gallery Demo with grid layout](https://robosoft.co/demo/gallery/design-video-gallery)
 
 
 = Gallery Key Features =
@@ -152,7 +152,7 @@ Robo Gallery is one of the most powerfull wordpress gallery. With Robo Gallery y
 *  **Gallery Custom Layout** - Advanced options for customization layout of the gallery. Ability to define custom size and columns amount of the gallery for different screen resolution. Ability to enable auto size option different way for every gallery screen size resolution. Every gallery image have columns option where you can customize size of the image. Every image could take different amount of columns. 
 *  **Gallery Lightbox customization** - Gallery lightbox support set of advanced functionality. You can easily enable social buttons in gallery lightbox or change galley images description font color. With color selector you can change color and transparency of the gallery lightbox background. 
 *  **Clone Gallery** - Gallery will copy all settings from selected source gallery. Very useful option for the webmasters who planning to create a lot of galleries. You don't have to configure gallery every time. Just setup styles of the gallery in one place and use the same options for another galleries on your website in another galleries. Very fast, comfortable, advanced tool to speed up your workflow! 
-*  **Gallery Compatibility** -  Gallery implemented in native Wordpress style. All code implemented based on Wordpress api and base classes. Also we tried in our gallery code avoid conflicts with other plugins and libraries. If you accordantly meet with some errors, conflicts or other related problems feel free to [contact us](http://robosoft.co/clients) and we'll to sort everything in short time. Also we have implemented set of gallery options which allow you to manager your gallery general settings to avoid conflicts. 
+*  **Gallery Compatibility** -  Gallery implemented in native Wordpress style. All code implemented based on Wordpress api and base classes. Also we tried in our gallery code avoid conflicts with other plugins and libraries. If you accordantly meet with some errors, conflicts or other related problems feel free to [contact us](https://robosoft.co/clients) and we'll to sort everything in short time. Also we have implemented set of gallery options which allow you to manager your gallery general settings to avoid conflicts. 
 *  **Secure Gallery** -  Gallery hard tested and followed all security requirements to avoid any security problems in our gallery.
 *  **Gallery Posts** -  in gallery implemented advanced posts manager. For every gallery possible to create multiply posts. Gallery posts manager have options for customization titles, slug, category and customizable text.
 *  **Advanced gallery columns** -  in gallery implemented advanced customizable thumbnails columns management. In gallery settings you can define different amount of thumbnails columns for different screen size/resolution.
@@ -164,21 +164,21 @@ Robo Gallery is one of the most powerfull wordpress gallery. With Robo Gallery y
 
 > #### Useful Gallery Links 
 >
->[Multi Categories Cars Gallery Demo](http://robosoft.co/demo/gallery/cars-gallery-demo/)
+>[Multi Categories Cars Gallery Demo](https://robosoft.co/demo/gallery/cars-gallery-demo/)
 >
->[Grid Layout Gallery Demo with Fade hover effect](http://robosoft.co/demo/gallery/custom-layout/)
+>[Grid Layout Gallery Demo with Fade hover effect](https://robosoft.co/demo/gallery/custom-layout/)
 >
->[Multi Categories Polaroid style Movie Gallery Demo with classic layout](http://robosoft.co/demo/gallery/gallery-demo-movie/)
+>[Multi Categories Polaroid style Movie Gallery Demo with classic layout](https://robosoft.co/demo/gallery/gallery-demo-movie/)
 >
->[Design Sketch Gallery Demo with grid layout](http://robosoft.co/demo/gallery/gallery-design/)
+>[Design Sketch Gallery Demo with grid layout](https://robosoft.co/demo/gallery/gallery-design/)
 >
->[Multi Categories Gallery Demo with custom interface colors and classic layout](http://robosoft.co/demo/gallery/push-effect-demo/)
+>[Multi Categories Gallery Demo with custom interface colors and classic layout](https://robosoft.co/demo/gallery/push-effect-demo/)
 >
->[Video Gallery Demo with grid layout](http://robosoft.co/demo/gallery/design-video-gallery)
+>[Video Gallery Demo with grid layout](https://robosoft.co/demo/gallery/design-video-gallery)
 >
->[Technical Support for Robo Gallery](http://robosoft.co/robogallery)
+>[Technical Support for Robo Gallery](https://robosoft.co/robogallery)
 >
->[Find More Details about Robo Gallery](http://robosoft.co/robogallery) 
+>[Find More Details about Robo Gallery](https://robosoft.co/robogallery) 
 
 
 == Installation ==
@@ -248,11 +248,27 @@ In gallery general settings you can find gallery thumbnails columns options whic
 
 = Gallery Compatibility = 
 
-Gallery implemented in native Wordpress style. All code implemented based on Wordpress api and base classes. Also we tried in our gallery code avoid conflicts with other plugins and libraries. If you accordantly meet with some errors, conflicts or other related problems feel free to [contact us](http://robosoft.co/clients) and we'll to sort everything in short time.
+Gallery implemented in native Wordpress style. All code implemented based on Wordpress api and base classes. Also we tried in our gallery code avoid conflicts with other plugins and libraries. If you accordantly meet with some errors, conflicts or other related problems feel free to [contact us](https://robosoft.co/clients) and we'll to sort everything in short time.
 	
 If any problem occurs, please contact us.
 
 == Changelog ==
+
+= 2.6.13 =
+*   Update of the statistics section in backend
+*   Small statistics fixes
+
+= 2.6.12 =
+*   Fix of the admin interface 
+*   Updated category management dialog
+
+= 2.6.11 =
+*   Update of the language functionality
+*   Multi language support
+
+= 2.6.10 =
+*   Modification of the interface in admin section
+*   Modification of the zip library
 
 = 2.6.9 =
 *   Added new archiver library for alternative backup method
@@ -365,6 +381,22 @@ If any problem occurs, please contact us.
 
 == Upgrade Notice ==
 
+= 2.6.13 =
+Update of the statistics section in backend
+Small statistics fixes
+
+= 2.6.12 =
+Fix of the admin interface 
+Updated category management dialog
+
+= 2.6.11 =
+Update of the language functionality
+Multi language support
+
+= 2.6.10 =
+Modification of the interface in admin section
+Modification of the zip library
+
 = 2.6.9 =
 Added new archiver library for alternative backup method
 Backup algorithm optimized
@@ -472,3 +504,70 @@ Scroll effect for Express Panel
 = 2.4.2 =
 Updated statistics, added new reset button
 Small code fixes
+
+==Wordpress Gallery Step by Step Guide==
+
+= Step 1: Gallery installation =   
+ 
+1.1. Installation.
+ 
+Log-in to your WordPress administrator panel. 
+Open wordpress plugin manager.
+Click add plugin button. Select gallery archive from your PC. In the case if you download this plugin from directory.
+For the case if you don't have downloaded plugin on your PC you can easily find it in directory. 
+Just put gallery text into search field and you can see our plugin in search results.
+
+= Step 2: Create new gallery =
+
+Open gallery list in left menu block of admin section. In list you can select some item for edit or create new.
+When you open this section on top you can see block of the buttons: Statistics, Backup, Add gallery.
+Click on Add button. Configure settings and save new photo album. Click on publish button to save it.
+
+= Step 3: Upload image for the gallery =
+
+Open gallery list in left menu block of admin section. In list you can select some item for edit or create new.
+When you open photo album for edit on right side you can find Manage images button. Click on manage images button and you'll see media manager section of the gallery. In media manager you can see Add to gallery section where you can upload images or manage already uploaded images. You can drag and drop images to this block or use browse images button. You can sort image if you drag and drop them in the list.
+
+= Step 4: Gallery interface configuration =
+
+Open gallery list in left menu block of admin section. In list you can select some item for edit or create new.
+In settings section you can find thumbnails view options block. There you can configure settings for the pictures borders, shadows and spacing. All thumbnails background colors for the static and hovered images. 
+Another block of the options which helps to configure interface it's Menu options. In menu options you can setup gallery menu. In menu settings you can configure view and action of the photo album navigation. In additional parameters you can change menu modes to enable categories or tags on top of the gallery. 
+Another function which could be configured there it's gallery search option. 
+
+= Step 5: Configuration layout of the gallery =
+
+Gallery layout could be configured depend of your needs. It's absolutely flexible. Strucuture of the gallery thumbnails consist of columns which could be defined in size options. In size options tab we have set of the options for column amount in different screen size. At the same time in gallery images manager every image also have columns option. This option make you able to define how much columns from the general photo album layout every image gonna take.
+By default every image take only one column. With this combination you can create absolutely different layout for every album.
+
+= Step 6: Hover effects of the gallery modification =
+
+Open gallery list in left menu block of admin section. In list you can select some item for edit or create new.
+Scroll down to the hover options where you can fully change hover effect settings. Enable/Disable Click thumbnails option. Differrent modes for mobile album and for photo album on pc. We have implemented 15 hover animation effects. In hover settings you can enable Fade effect for the gallery. All image album interface elements are fully customzable. You can setup layout of the hovered image depend of your needs. Show or hide link button, zoom button, image descripiton, image title, image caption, video button. 
+Change color of the text or background of every gallery interface element.
+
+= Demo 1: Gallery with thumbnails view, icons, load more, image hover, grid layout =
+
+Thumbnail gallery with top navigation menu. Every thumbnails have image description, image border. Pictures have images hover animation. When image on hovered show title, description and zoom button. When you click on image you can see lightbox with image carousel. On lightbox you can see facebook sharing button to make facebook gallery. Photo album menu have flat buttons. 
+
+= Demo 2: Grid gallery, hover effect with buttons, gallery widget, image title, photo lightbox =
+
+This gallery grid have images with different size. Some of thumbnails take few columns some image just one column. As result you can see photo album grid with different size thumbnails mix. Hovered images have image description and zoom button which show gallery lightbox after click. Thumbnails without borders have rounded corners. Icons and colors of the hover buttons are customized. You can select different icon with wizard in backend.
+
+= Demo 3: Photo album, polaroid gallery view, content panel, fullscreen lightbox, albums, blog menu =
+
+This is th best gallery to create polaroid style views. Set of options make you able to configure content panel below picture. Select colors, styles and content source from image title, image description or image caption. In combination with no border thumbnails and shadow images looks very attractive. 
+Lightbox effect have animation when it's load. Lightbox load after click on hover button. Lightbox support additional interface elements like description panel, images counter, facebook share, twitter share, google+ share.
+
+= Demo 4: Galley, masonry gallery, mansonry photos, masonry layout =
+
+Masonry layout of the gallery could be customized in general options block of the settings. Combining settings of the image layout and gallery layout. There's no limits for the gallery view everything depends of your needs. Masonry photos could be customized in images manager. Open additional masonry picture options panel to defind some custom settings for the picture. 
+
+= Demo 5: Picture gallery, photography, gallery carousel, photo slideshow =
+
+The same size square thumbnails of the photo album. Image borders with hover effect and popup panel with description or image title as content source. When you open enlarged image in lightbox you can see gallery slideshow from the images. Is it possible to change images like in image carousel. Picture thumbnail have border and shadows. This shadows could have different colors and size on static and hovered status. Top photo album menu have red color flat style.
+
+= Demo 6: Mosaic gallery, youtube video, vimeo video, video gallery =
+
+Mosaic photo album with youtube or vimeo content. Customized layout with different size thumbnails. Album images have additional parameters where you can specify video links. With such links you can easily create Youtube gallery or Vimeo gallery. When you setup video album you can click on every thumbnail of the photo album and after that you can see video in lightbox. Strucuture of the gallery thumbnails consist of columns which could be defined in size options. In size options tab we have set of the options for column amount in different screen size. At the same time in album images manager every image also have columns option. This option make you able to define how much columns from the general gallery layout every image gonna take.
+By default every image take only one column. With this combination you can create absolutely different layout for every item.

@@ -1,0 +1,157 @@
+/* tables */
+/*
+table.tablesorter {
+	font-family:arial;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 12px;
+	
+	text-align: left;
+	width:100%
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #019FC6;
+	color:#FFFFFF;
+	text-transform:uppercase;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(../../maj/phototheque/photos/sortable/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+
+table.tablesorter tbody tr.odd td {
+	background-color:#FCA150;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(../../maj/phototheque/photos/sortable/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(../../maj/phototheque/photos/sortable/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #FCA150;
+}
+*/
+
+/* tables */
+table.tablesorter {
+	font-family:Verdana, Helvetica, sans-serif;
+	/*background-color: #E6EEEE;*/
+	margin:0px;
+	font-size: 10px;
+	width: 100%;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #6cc3ba;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+	color:#FFF;
+}
+table.tablesorter thead tr .header {
+	background-image: url(../img/sortable/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #000;
+	padding: 4px;
+	background-color: #C5CFDA;
+	vertical-align: top;
+		font-size:11px;
+}
+table.tablesorter tbody tr.odd td  {
+	
+	background-color:#FFFFFF;
+	color:#000;
+	font-size:11px;
+	
+}
+
+table.tablesorter tbody tr:hover td  {
+	
+	background-color:#EDF0F3;
+	color:#000;
+	font-size:11px;
+	
+}
+
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(../img/sortable/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(../img/sortable/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #4C9AB0;
+color:#FFF;
+}
+
+
+table.tablesorter_1 {
+	font-family:Verdana, Helvetica, sans-serif;
+	/*background-color: #E6EEEE;*/
+	margin:0px;
+	font-size: 10px;
+	text-align: left;
+	min-width:100px;
+}
+table.tablesorter_1 thead tr th, table.tablesorter_1 tfoot tr th {
+	background-color: #6cc3ba;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+	color:#FFF;
+}
+table.tablesorter_1 thead tr .header {
+	background-image: url(../img/sortable/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter_1 tbody td {
+	color: #000;
+	padding: 4px;
+	background-color: #E6E6E6;
+	vertical-align: top;
+		font-size:11px;
+}
+table.tablesorter_1 tbody tr.odd td  {
+	
+	background-color:#B8B9B8;
+	color:#000;
+	font-size:11px;
+	
+}
+
+table.tablesorter_1 tbody tr:hover td  {
+	
+	background-color:#FCFCFC;
+	color:#000;
+	font-size:11px;
+	
+}
+
+table.tablesorter_1 thead tr .headerSortUp {
+	background-image: url(../img/sortable/asc.gif);
+}
+table.tablesorter_1 thead tr .headerSortDown {
+	background-image: url(../img/sortable/desc.gif);
+}
+table.tablesorter_1 thead tr .headerSortDown, table.tablesorter_1 thead tr .headerSortUp {
+background-color: #00618C;
+color:#FFF;
+}

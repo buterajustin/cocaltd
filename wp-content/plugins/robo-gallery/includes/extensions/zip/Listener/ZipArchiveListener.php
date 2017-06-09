@@ -12,60 +12,18 @@
 
 namespace PHPZip\Zip\Listener;
 
-interface ZipArchiveListener {
+	interface ZipArchiveListener {
 
-    /**
-     * Event fired after a zip entry has been successfully built.
-     *
-     * @author Greg Kappatos
-     *
-     * @param array $params Array that contains file (zipEntry).
-     */
-    public function onBuildZipEntry(array $params);
+	    public function onBuildZipEntry(array $params);
 
-    /**
-     * Event fired after a stream has been successfully opened.
-     *
-     * @author Greg Kappatos
-     *
-     * @param array $params Array that contains file (zipEntry).
-     */
-    public function onOpenStream(array $params);
+	    public function onOpenStream(array $params);
 
-    /**
-     * Event fired after a file has been successfully added to archive.
-     *
-     * @author Greg Kappatos
-     *
-     * @param array $params Array that contains file (zipEntry).
-     */
-    public function onAddFile(array $params);
+	    public function onAddFile(array $params);
 
-    /**
-     * Event fired after a large file has been successfully added to archive.
-     *
-     * @author Greg Kappatos
-     *
-     * @param array $params Array that contains file (zipEntry).
-     */
-    public function onAddLargeFile(array $params);
+	    public function onAddLargeFile(array $params);
 
-    /**
-     * Event fired after a zip archive has been sent.
-     *
-     * @author Greg Kappatos
-     *
-     * @param array $params Array that contains file (zipEntry).
-     */
-    public function onSendZip(array $params);
+	    public function onSendZip(array $params);
 
-    /**
-     * Event fired before a subclass of \PHPZip\Zip\Core\AbstractException is thrown.
-     *
-     * @author Greg Kappatos
-     *
-     * @param array $params Array that contains file (zipEntry).
-     */
-    public function onException(array $params);
+	    public function onException(array $params);
 
-}
+	}
